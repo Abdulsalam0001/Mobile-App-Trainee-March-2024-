@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abdulsalam Adedibu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.mySlides {
+  display: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust slideshow height on large screens */
+@media screen and (min-width: 768px) {
+  .mySlides {
+    max-height: 400px;
+  }
+}
+
+/* Header style */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer style */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Smooth scrolling when clicking on navigation links
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+  
+  // Slideshow functionality
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var slides = $(".mySlides");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    $(slides[slideIndex-1]).fadeIn(1000);
+    setTimeout(carousel, 3000);
+  }
+});
+</script>
+</head>
+<body>
+
+<!-- Header -->
+<!-- Header -->
+<header class="w3-bar w3-black" style="color: #333 !important; background-color: #f1f1f1 !important;">
+    <h1>Abdulsalam Adedibu</h1>
+  </header>
+  
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#about" class="w3-button w3-bar-item">About Me</a>
+  <a href="#resume" class="w3-button w3-bar-item">Resume</a>
+  <a href="#portfolio" class="w3-button w3-bar-item">Portfolio</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section id="home">
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="./assets/images/201817123_197405542282771_3364505491973700357_n.jpg" style="width:100%">
+    <img class="mySlides" src="./assets/images/220923892_1110508279474913_2768933307994234197_n.jpg" style="width:100%">
+    <img class="mySlides" src="./assets/images/235705533_373448311161073_8369220797632041828_n.jpg" style="width:100%">
+    <img class="mySlides" src="./assets/images/me.jpg" style="width:100%">
+    <img class="mySlides" src="./assets/images/me2.jpg" style="width:100%">
+    <img class="mySlides" src="./assets/images/me3.jpg" style="width:100%">
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="w3-container w3-center w3-content" style="max-width:800px">
+  <h2 class="w3-wide" id="about">About Me</h2>
+  <p class="w3-opacity">Fullstack Web Developer / Software Developer  </p>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-third">
+      <p>I am a software developer with over 5 years of experience in web development, graphic design, and problem-solving. Currently open to remote work, I focus on building complex websites or web apps and creating animations or graphic designs.</p>
+    </div>
+    <div class="w3-third">
+      <p>I work for a company that helps people put their business online, playing the role of lead programmer and graphic designer.</p>
+    </div>
+    <div class="w3-third">
+      <p>I hold a BSC in Engineering degree from Odudwa University of Ife. I have certifications in web development, graphic design, and database management. I am proficient in Microsoft Office, driving, and communication skills.</p>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-third">
+      <h2 id="resume">Work Experience</h2>
+      <p>Programmer at Mercury Labs - Lagos (Present)</p>
+    </div>
+    <div class="w3-third">
+      <h2>Education</h2>
+      <p>BSC in Engineering from Odudwa University of Ife - Lagos</p>
+    </div>
+    <div class="w3-third">
+      <h2>Skills</h2>
+      <p>Customer service, Microsoft Office, Driving, Communication skills, Web developer, React, Graphic designer, Administrative experience, Software developer, UI/UX (4 years)</p>
+    </div>
+  </div>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-third">
+      <h2>Certifications and Licenses</h2>
+      <p>Sololearn Certificates, W3schools certificate, Certified Programmer, UI/UX designer, Database manager</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-bar w3-black">
+  <p>&copy; 2024 Abdulsalam Adedibu. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
